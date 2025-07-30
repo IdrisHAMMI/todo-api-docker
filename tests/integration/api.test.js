@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../../src/app-test'); // Use the test version
+const app = require('../../src/app-test');
 const Task = require('../../src/models/task');
 
 describe('Task API Integration Tests', () => {

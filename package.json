@@ -7,7 +7,8 @@
     "start": "node src/app.js",
     "test": "jest --forceExit --detectOpenHandles --maxWorkers=1",
     "test:watch": "jest --watch --maxWorkers=1",
-    "test:coverage": "jest --coverage --forceExit --maxWorkers=1"
+    "test:coverage": "jest --coverage --forceExit --maxWorkers=1",
+    "lint": "eslint src/ tests/"
   },
   "keywords": [
     "nodejs",
@@ -23,13 +24,15 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
-    "eslint": "^9.32.0",
     "express": "^5.1.0",
     "helmet": "^8.1.0",
     "mongoose": "^8.16.5"
   },
   "devDependencies": {
+    "@eslint/js": "^9.32.0",
     "cross-env": "^10.0.0",
+    "eslint": "^9.32.0",
+    "globals": "^16.3.0",
     "jest": "^30.0.5",
     "mongodb-memory-server": "^10.1.4",
     "supertest": "^7.1.4"

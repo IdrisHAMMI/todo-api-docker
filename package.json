@@ -1,15 +1,52 @@
 {
-  "scripts": {
-    "start": "node src/app.js"
-  },
   "name": "todo_api",
+  "version": "1.0.0",
   "description": "A simple Todo API using Express & Docker",
   "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "jest --forceExit --detectOpenHandles --maxWorkers=1",
+    "test:watch": "jest --watch --maxWorkers=1",
+    "test:coverage": "jest --coverage --forceExit --maxWorkers=1"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "docker",
+    "api",
+    "todo",
+    "devops",
+    "mongodb"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
+    "eslint": "^9.32.0",
     "express": "^5.1.0",
     "helmet": "^8.1.0",
     "mongoose": "^8.16.5"
+  },
+  "devDependencies": {
+    "cross-env": "^10.0.0",
+    "jest": "^30.0.5",
+    "mongodb-memory-server": "^10.1.4",
+    "supertest": "^7.1.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "<rootDir>/tests/setup.js"
+    ],
+    "testTimeout": 60000,
+    "maxWorkers": 1,
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/app.js"
+    ]
   }
 }

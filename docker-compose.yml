@@ -1,4 +1,6 @@
 # Placeholder Docker Compose config until i can test the container properly
+# (edit: yeah this works nvm)
+
 version: '3.8'
 
 services:

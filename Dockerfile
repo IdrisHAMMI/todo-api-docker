@@ -1,4 +1,5 @@
 # Placeholder Dockerfile config until i can test the container properly
+# (edit: yeah this works nvm)
 
 # Dockerfile
 FROM node:18-alpine
